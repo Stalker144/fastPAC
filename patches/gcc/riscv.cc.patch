@@ -1,0 +1,67 @@
+4352,4363d4351
+< 	if ((frame->mask | frame->fmask) != 0)
+<     {
+<       //pac insertion only push ra into stack
+<       //generate and load pac
+<       /* pac-pac   */  
+<        insn = emit(gen_pac(gen_rtx_REG(Pmode,RETURN_ADDR_REGNUM),
+<                       gen_rtx_REG(Pmode,RETURN_ADDR_REGNUM)));
+<       add_reg_note (insn, REG_CFA_TOGGLE_RA_MANGLE, const0_rtx);
+<       RTX_FRAME_RELATED_P (insn) = 1;  
+< 	}
+< 
+< 
+4380,4381d4367
+< 
+< 
+4494,4512d4479
+<     
+<     
+<     if ((frame->mask | frame->fmask) != 0)
+<     	{
+<     	
+<     	
+<     		  /* pac-aut   */
+<     		  //aut when the ra is populated from stack
+< 		  	  //load key
+< 	 insn = emit_insn(gen_aut(gen_rtx_REG(Pmode,RETURN_ADDR_REGNUM),
+< 		                      gen_rtx_REG(Pmode,RETURN_ADDR_REGNUM)));
+< 		  add_reg_note (insn, REG_CFA_TOGGLE_RA_MANGLE, const0_rtx);
+< 		  RTX_FRAME_RELATED_P (insn) = 1;	
+<     	}
+< 
+< 		
+< 	
+<     
+<     
+4549,4551d4515
+< //pac-aut
+<   bool handle_reg = FALSE;
+< 
+4559,4560c4523
+<       //pac-aut
+<       handle_reg = TRUE;
+---
+>      
+4604,4615c4567
+< if (handle_reg)	    
+<   	{
+<   	  //
+< 	  //authenticate pac
+< 	  //frame->mask != 0 &
+< 	  /*pac-aut*/
+< 	insn = emit_insn(gen_aut(gen_rtx_REG(Pmode,RETURN_ADDR_REGNUM),
+< 		                      gen_rtx_REG(Pmode,RETURN_ADDR_REGNUM)));
+< 		  add_reg_note (insn, REG_CFA_TOGGLE_RA_MANGLE, const0_rtx);
+< 		  RTX_FRAME_RELATED_P (insn) = 1;	
+< 	
+<   	}
+---
+> 
+4652,4655d4603
+< 	//pac-aut
+< 	
+< 
+< 
+4659d4606
+< 

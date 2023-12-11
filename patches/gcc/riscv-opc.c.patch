@@ -1,0 +1,10 @@
+270a271,276
+> //pac-insn
+> 
+> {"lkey",         0, INSN_CLASS_I, "",     MATCH_LKEY, MASK_LKEY, match_opcode, 0 },
+> {"pac",         0, INSN_CLASS_I, "d,s",     MATCH_PAC, MASK_PAC, match_opcode, 0 },
+> {"aut",         0, INSN_CLASS_I, "d,s",     MATCH_AUT, MASK_AUT, match_opcode, 0 },
+> 
+1937a1944,1945
+> 
+> 

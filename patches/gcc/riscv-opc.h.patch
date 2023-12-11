@@ -1,0 +1,41 @@
+24a25,49
+> //pac-insn
+> /**/
+> #define MATCH_LKEY 0xb
+> #define MASK_LKEY 0xffffffff
+> 
+> #define MATCH_AUT 0x200600b
+> #define MASK_AUT 0xfff0707f
+> #define MATCH_PAC 0x400600b
+> #define MASK_PAC 0xfff0707f
+> 
+> /*
+> #define MATCH_LKEY 0x2b
+> #define MASK_LKEY 0xfe00707f
+> #define MATCH_PAC 0x102b
+> #define MASK_PAC 0xfe00707f
+> #define MATCH_PACG 0x202b
+> #define MASK_PACG 0xfe00707f
+> #define MATCH_PACL 0x302b
+> #define MASK_PACL 0xfe00707f
+> #define MATCH_AUT 0x402b
+> #define MASK_AUT 0xfe00707f
+> #define MATCH_AUTL 0x502b
+> #define MASK_AUTL 0xfe00707f
+> */
+> 
+2523a2549,2562
+> //pac-insn
+> /* */
+> DECLARE_INSN(lkey, MATCH_LKEY, MASK_LKEY)
+> DECLARE_INSN(pac, MATCH_PAC, MASK_PAC)
+> DECLARE_INSN(aut, MATCH_AUT, MASK_AUT)
+> /*
+> DECLARE_INSN(lkey, MATCH_LKEY, MASK_LKEY)
+> DECLARE_INSN(pac, MATCH_PAC, MASK_PAC)
+> DECLARE_INSN(pacg, MATCH_PACG, MASK_PACG)
+> DECLARE_INSN(pacl, MATCH_PACL, MASK_PACL)
+> DECLARE_INSN(aut, MATCH_AUT, MASK_AUT)
+> DECLARE_INSN(autl, MATCH_AUTL, MASK_AUTL)
+> */
+> 

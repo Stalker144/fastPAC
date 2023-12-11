@@ -1,0 +1,43 @@
+48,54c48
+<   
+<   ;;pac
+<   UNSPEC_PAC
+<   UNSPEC_AUT
+<   ;;UNSPEC_LKEY
+<   ;;UNSPEC_LUI
+<   ;;UNSPEC_SLLI
+---
+> 
+99,102d92
+<       ;;pac temp reg
+<    (T3_REGNUM			28)
+<    (T4_REGNUM			29)
+< 
+448,470d437
+< ;;  ..........
+< ;;
+< ;;      pac-insn
+< ;;
+< ;;  ..........
+< 
+< (define_insn "pac"
+< 	[(set(match_operand:DI 0 "register_operand" "=r")
+< 	(unspec:DI [(match_operand:DI 1 "register_operand" "r")] UNSPEC_PAC))
+< 	(clobber (reg:DI RETURN_ADDR_REGNUM))]
+< 	"TARGET_64BIT"
+< 	"pac\t%0,%1"
+< 	)
+< 	
+<   
+< (define_insn "aut"
+< 	[(set(match_operand:DI 0 "register_operand" "=r")
+< 	(unspec:DI [(match_operand:DI 1 "register_operand" "r")] UNSPEC_AUT))
+< 	(clobber (reg:DI RETURN_ADDR_REGNUM))]
+< 	"TARGET_64BIT"
+< 	"aut\t%0,%1"
+< 	)
+< 
+2859c2826
+<   "<load>\t%2, %1\;<store>\t%2, %0\;li\t%2, 0"
+---
+>   "<load>\\t%2, %1\;<store>\\t%2, %0\;li\t%2, 0"
